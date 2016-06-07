@@ -57,7 +57,7 @@ From there you can choose which students you want to print out, and then hit the
 
 I highly recommend downloading a print to pdf program from online, if your machine doesn't already do it by default.
 
-<h4>Closing Remarks</h4>
+<h3>Closing Remarks</h3>
 
 Thank you for taking the time to read this. I know that it is quite long, but I hope it was worth it. Please feel free to download the files and run the program yourself! 
 
