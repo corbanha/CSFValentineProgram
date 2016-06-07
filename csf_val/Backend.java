@@ -32,8 +32,8 @@ public class Backend {
 		try {
 			File dataFile = new File(SAVE_FILE_LOCATION);
 			if(dataFile.exists()){
-				
-				String lastFileSaveLocation = dataFile.nextLine();
+				Scanner scanner = new Scanner(dataFile);
+				String lastFileSaveLocation = scanner.nextLine();
 				if(new File(lastFileSaveLocation).exists()){
 					locationOfLastSave = lastFileSaveLocation;
 				}else{
