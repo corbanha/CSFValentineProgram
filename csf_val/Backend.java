@@ -17,18 +17,6 @@ import org.apache.poi.ss.usermodel.WorkbookFactory;
 
 public class Backend {
 	
-	@Deprecated
-	public static class IncorrectEndKeyException extends Exception {
-		public IncorrectEndKeyException(){
-			super("The end key value didn't match the scramble.");
-		}
-		
-		public IncorrectEndKeyException(String des){
-			super(des);
-		}
-		private static final long serialVersionUID = -7126246062180431677L; //no idea what this is, but the compiler wanted it
-	}
-	
 	public static final String SAVE_FILE_LOCATION = "C:\\CSFVData\\data.txt"; //location of system data save.
 	public static final String iconLocation = "icon.png";
 	
@@ -44,9 +32,8 @@ public class Backend {
 		try {
 			File dataFile = new File(SAVE_FILE_LOCATION);
 			if(dataFile.exists()){
-				Scanner scanner = new Scanner(new File(SAVE_FILE_LOCATION));
 				
-				String lastFileSaveLocation = scanner.nextLine();
+				String lastFileSaveLocation = dataFile.nextLine();
 				if(new File(lastFileSaveLocation).exists()){
 					locationOfLastSave = lastFileSaveLocation;
 				}else{
